@@ -1,0 +1,47 @@
+<div ng-controller="manage">
+    <p class="addClientHeading mt-3">Manage Stocks</p>
+    <div class="row">
+        <div class="col-12 col-lg-4 m-auto mt-2" id="createClient" ng-class="{'d-none':createClient}">
+            <label for="" class="form-label">Select Product:<span
+                    style="color: red; vertical-align: text-bottom;">*</span></label>
+            <select name="" id="" class="form-control" ng-model="selectProduct" ng-change="getQuantity()">
+                <option value="selectProduct">-select-</option>
+                <option value={{x}} ng-repeat="x in products">{{x}}</option>
+            </select>
+            <p class="text-danger form-text text-center p-0 m-0">{{selectProductError}}</p>
+
+            <label for="" class="form-label">Transaction Type:<span
+                    style="color: red; vertical-align: text-bottom;">*</span> </label>
+            <select name="" id="" ng-model="transactionType" class="form-control">
+                <option value="selectTransaction">-select-</option>
+                <option value="intake">Intake</option>
+                <option value="outward">Outward</option>
+            </select>
+            <p class="text-danger form-text text-center p-0 m-0">{{selectTransactionTypeError}}</p>
+
+            <div>
+                <label for="">Available Quantity:<span style="color: red; vertical-align: text-bottom;">*</span>
+                </label>
+                <input type="text" class="form-control mt-2" disabled value={{availableQuantity}}>
+            </div>
+
+            <label for="" class="form-label">Client Name:<span style="color: red; vertical-align: text-bottom;">*</span>
+            </label>
+            <select name="" id="" class="form-control" ng-model="selectClient">
+                <option value="selectClient">-Select-</option>
+                <option ng-repeat="x in clientNames" value={{x.client_name}}>{{x.client_name}}</option>
+            </select>
+            <p class="text-danger form-text text-center p-0 m-0">{{selectClientError}}</p>
+
+            <label for="" class="form-label">Quantity:<span style="color: red; vertical-align: text-bottom;">*</span>
+            </label>
+            <input type="number" class="form-control" ng-model="quantity" placeholder="Enter Quantity">
+            <p class="text-danger p-0 m-0">{{quantityError}}</p>
+            <p class="text-center"> <button class="createButton mt-3 pb-1" ng-click="manageStocks()">Submit</button>
+        </div>
+        <div id="successfullCreation">
+            <p class="text-center text-success" style="font-size: 25px;">{{manageStatus}}</p>
+        </div>
+    </div>
+
+</div>

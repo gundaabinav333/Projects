@@ -1,0 +1,55 @@
+<div>
+    <p class="addClientHeading mt-3">Add Client</p>
+    <div class="row">
+        <div class="col-12 col-lg-4 m-auto mt-2" id="createClient">
+            <label class="form-label">Client Name:<span style="color: red; vertical-align: text-bottom;">*</span>
+            </label>
+            <input type="text" class="form-control" name="clientName" placeholder="Enter Client Name"
+                ng-model="clientName">
+            <p class="text-danger text-center form-text">{{clientNameError}}</p>
+            <p class="text-center"> <button class="createButton mt-3 pb-1" ng-click="createClient()">create</button>
+            </p>
+
+            <div class="table-container">
+                <table class="table" style="width: 270px; margin: auto;border-radius:250px">
+                    <thead>
+                        <tr>
+                            <th>client_id</th>
+                            <th>Client_Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="client in clientNames">
+                            <td>{{client.id}}</td>
+                            <td>{{client.client_name}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div id="successfullCreation" class="d-none">
+            <p class="text-center text-success" style="font-size: 25px;">Client Created Successfully</p>
+        </div>
+    </div>
+    <style>
+        .table-container {
+            border-radius: 10px;
+
+        }
+
+        .table {
+            border: 2px solid green;
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(89, 162, 105);
+            padding: 8px;
+            text-align: left;
+            border-radius: 80px;
+        }
+    </style>
+
+
+</div>

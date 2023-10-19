@@ -1,0 +1,57 @@
+.navigationSection {
+    border-right: 2px solid black;
+    height: 84vh;
+}
+
+.imsLogo {
+    font-weight: 700;
+    font-size: 35px;
+    color: rgb(199, 17, 123);
+}
+
+ul li {
+    list-style-type: none;
+    padding-top: 20px;
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+ul li:hover {
+    border-left: 3px solid rgb(0, 83, 0);
+    background-color: rgb(242, 249, 255);
+    color: rgb(0, 83, 0);
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.addClientHeading {
+    font-size: 20px;
+    text-align: center;
+}
+
+.createButton {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background-color: rgba(37, 138, 174, 0.9);
+    color: white;
+    font-weight: 500;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.createButton:hover {
+    background-color: white;
+    border: 1px solid rgb(68, 68, 68);
+    color: rgb(64, 121, 191);
+}
+
+.logoutButton {
+    border: none;
+    background-color: aliceblue;
+}

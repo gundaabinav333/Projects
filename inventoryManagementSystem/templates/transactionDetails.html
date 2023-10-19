@@ -1,0 +1,122 @@
+<div ng-controller="tran">
+    <p class=" text-center mt-3" style="font-size: 23px;">Transaction Details</p>
+    <div class="row">
+        <div class="col-12 col-lg-7 m-auto mt-2" id="createClient">
+            <table class="table-responsive">
+                <thead>
+                    <tr>
+                        <th>Transaction_id</th>
+                        <th>(Intake/OutWard)</th>
+                        <th>client_name</th>
+                        <th>TIme</th>
+                        <th>Total_value</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="t in transactionInformation">
+                        <td>ECC{{t.id}}</td>
+                        <td>{{t.transaction_type}}</td>
+                        <td>{{t.client_name}}</td>
+                        <td>{{t.created_time | date:'dd-MM-yyyy' }}</td>
+                        <td>{{t.total_value}}</td>
+                        <td>
+                            <div class="modal fade" id="t{{t.id}}" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="t{{t.id}}Label">Transaction Details</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-6">
+
+                                                    <label for="" class="form-label" style="font-weight: 500;">Admin Id: </label>
+                                                    <p style="font-size: 15px;">{{t.admin_id}}</p>
+                                                    <label for="" class="form-label" style="font-weight: 500;" >Transaction_id:</label>
+                                                    <p style="font-size: 15px;">ECC{{t.id}}</p>
+                                                    <label for="" class="form-label" style="font-weight: 500;">Transaction
+                                                        Type:</label>
+                                                        <p style="font-size: 15px;">{{t.transaction_type}}</p>
+
+                                                    <label for="" class="form-label" style="font-weight: 500;">Client
+                                                        Name:</label>
+                                                        <p style="font-size: 15px;">{{t.client_name}}</p>
+
+
+                                                    <label for="" class="form-label" style="font-weight: 500;">Product
+                                                        Name:</label>
+                                                        <p style="font-size: 15px;">{{t.product_name}}</p>
+
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="" class="form-label" style="font-weight: 500;">Product Id:</label>
+                                                    <p style="font-size: 15px;">{{t.product_id}}</p>
+                                                    <label for="" class="form-label" style="font-weight: 500;">Product
+                                                        Price:</label>
+                                                        <p style="font-size: 15px;">{{t.product_price}}</p>
+
+                                                    <label for="" class="form-label" style="font-weight: 500;">Transacted
+                                                        Quantity:</label>
+                                                        <p style="font-size: 15px;">{{t.transacted_quantity}}</p>
+
+                                                    <label for="" class="form-label" style="font-weight: 500;">Total
+                                                        value:</label>
+                                                        <p style="font-size: 15px;">{{t.total_value}}</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" data-bs-target="#t{{t.client_name}}2"
+                                                data-bs-toggle="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="t{{t.id}}2" aria-hidden="true" aria-labelledby="t{{t.id}}Label2"
+                                tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="t{{t.id}}Label2">Modal 2</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Hide this modal and show the first with the button below.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" data-bs-target="#t{{t.id}}"
+                                                data-bs-toggle="modal">Back to first</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary" data-bs-toggle="modal" href="#t{{t.id}}"
+                                role="button">Details</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="successfullCreation" class="d-none">
+            <p class="text-center text-success" style="font-size: 25px;">Client Created Successfully</p>
+        </div>
+    </div>
+
+</div>
+<style>
+    table {}
+
+    th,
+    td {
+        border: 1px solid rgb(89, 162, 105);
+        padding: 8px;
+        text-align: left;
+    }
+</style>

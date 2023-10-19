@@ -1,0 +1,41 @@
+.imageSection {
+    height: 90vh;
+}
+
+.loginSection {
+    height: 100vh;
+    align-items: center;
+    background-color: rgba(230, 243, 255, 0.9);
+
+}
+
+.loginFieldsSection {
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    height: 300px;
+    width: 70%;
+    box-shadow: 6px 6px rgb(244, 244, 244);
+    align-items: center;
+    border-radius: 20px;
+}
+
+.imsLogo {
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(199, 17, 123);
+}
+
+.loginButton {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background-color: rgb(79, 162, 192);
+    color: white;
+    font-weight: 500;
+    border-radius: 7px;
+}
+
+.loginButton:hover {
+    background-color: white;
+    border: 1px solid rgb(68, 68, 68);
+    color: rgb(64, 121, 191);
+}

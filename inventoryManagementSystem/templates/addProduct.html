@@ -1,0 +1,23 @@
+<div>
+    <p class="addClientHeading mt-3">Add Product</p>
+    <div class="row col-12">
+        <div class="col-12 col-lg-4 m-auto mt-2" ng-class="{'d-none': addProduct}">
+            <label class="form-label">Product Name:<span style="color: red; vertical-align: text-bottom;">*</span>
+            </label>
+            <input type="text" class="form-control" name="productName" placeholder="Product Name"
+                ng-model="productName">
+            <p class="text-danger text-center form-text">{{productNameError}}</p>
+            <label class="form-label">Product Price:<span style="color: red; vertical-align: text-bottom;">*</span>
+            </label>
+            <input type="number" class="form-control" name="productPrice" placeholder="Product Price"
+                ng-model="productPrice">
+            <p class="text-danger text-center form-text">{{productPriceError}}</p>
+            <p class="text-center">
+                <button class="createButton mt-3 pb-1" ng-click="addProductFunction()">Add Product</button>
+            </p>
+        </div>
+        <div id="successfullCreation" ng-class="{'d-none': !addProduct}">
+            <p class="text-center text-success" style="font-size: 25px;">{{productAdded}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div>
+    <div class="row">
+
+        <div class="col-5 m-auto mt-2  " id="createClient">
+            <p class="text-center me-5 pe-3 addClientHeading">Stock Details</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product_id</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Quantity</th>
+
+                    </tr>
+
+
+                </thead>
+                <tbody ng-repeat='x in stockDetails'>
+                    <tr>
+                        <td>{{x.id}}</td>
+                        <td>{{x.product_name}}</td>
+                        <td>{{x.product_price}}</td>
+                        <td>{{x.product_quantity}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="successfullCreation" class="d-none">
+            <p class="text-center text-success" style="font-size: 25px;">Client Created Successfully</p>
+        </div>
+    </div>
+
+</div>
+<style>
+    table {
+        border: 2px solid rgb(24, 116, 24);
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid rgb(89, 162, 105);
+        padding: 8px;
+        text-align: left;
+        border-radius: 80px;
+    }
+</style>
