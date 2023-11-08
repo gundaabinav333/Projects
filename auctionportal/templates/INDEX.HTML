@@ -1,0 +1,372 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        background-color: #00498D !important;
+    }
+
+    .dropdown-menu a {
+        color: black !important;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-weight: 400;
+    }
+
+    header {
+        background-image: url(https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg);
+        height: 80px;
+    }
+
+    .mainLogo {
+        color: rgb(236, 243, 236);
+        font-size: 40px;
+        font-weight: 500;
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+
+
+
+    /* .navbar  ul  .nav-item li a{
+        color: white !important;
+        font-weight: 300;
+    } */
+
+
+
+    .navbar {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .introContainer {
+        background-color: rgb(209, 233, 255, 0.2) !important;
+    }
+
+    .logoutButton {
+        border: none;
+        margin: 6px;
+        background-color: #00498D;
+        color: white;
+        font-weight: 600;
+        border: 1px solid rgb(0, 0, 48);
+    }
+
+    .dropdown-item {
+        color: black !important;
+    }
+
+    .btn-dark {
+        background-color: rgb(59, 59, 64) !important;
+
+    }
+
+    .mainContainers {
+        background-color: AEE2FF;
+    }
+
+    .mainContainers .col-6 {
+        height: 250px !important;
+    }
+</style>
+
+
+
+<body class="m-2">
+
+
+    <header class="p-0 m-0">
+        <p class="mainLogo ">Auction Portal</p>
+
+    </header>
+    <div style="margin: 10px;" class="p-0 m-0">
+
+
+
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #22adf8;">
+
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: black;"">Home</a>
+                </li>
+               
+               
+                <li class=" nav-item">
+                            <a class="nav-link" href="{% url 'Contact' %}">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Module</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="{% url 'User1' %}">USER</a>
+
+
+
+
+                            <a class="dropdown-item" href="{% url 'Admin' %}">ADMIN</a>
+                            <a class="dropdown-item" href="{% url 'Manager' %}">MANAGER</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Registration' %}">Registration</a>
+                    </li>
+                </ul>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="logoutButton" data-toggle="modal" data-target="#modelId">
+
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Logout</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    Are you sure want to logout?
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                <button type="button" class="btn btn-primary">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        <div class="jumbo ">
+            <div class="introContainer text-center m-0">
+                <p class="col-lg-8 m-auto p-5" style="font-weight: 600;font-size: 15px;">
+                    In this Website Vehicles which are available for the auction are
+                    displayed .If the client clicks
+                    on the image of the vehicle all the features of the vehicle, price of the vehicle, manufactured year
+                    of
+                    the vehicle, condition, minimum amount for making a bid and when will the bidding ends and status of
+                    the
+                    bidding results whether he won the bid or not.</p>
+
+            </div>
+            <div class="row p-0 col-lg-12 m-auto introContainer" style="text-align:center">
+                <div class="col-4 " style="height: 2px;">
+                    <!-- <a href="{% url 'user' %}">
+                        <h2><button class="btn btn-dark">User</button></h2>
+                    </a> -->
+
+                </div>
+                <div class="col-4">
+                    <a href="admin1">
+                        <h2><button class="btn btn-dark">Admin</button></h2>
+                    </a>
+
+                </div>
+                <div class="col-4">
+                    <!-- <a href="{% url 'manager' %}">
+                        <h2><button class="btn btn-dark"><text-align>Manager</text-align></button></h2>
+                    </a> -->
+
+                </div>
+                <p>.</p>
+                <br>
+                <p></p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div style="background-color: rgb(221, 235, 248,0.3);">
+
+
+            <div>
+
+                <div class="row col-11 m-auto mainContainers">
+                    <div class="col-6 p-0 m-0 ">
+
+
+                        <img src="{% static 'images/existing sysstem.jpg' %}" width="100%" height="100%">
+
+
+                    </div>
+                    <div class="col-6 ps-2 pt-4 d-flex align-items-center">
+
+                        <p style="text-align: justify;font-size: 15px;">
+                            <b>Existing system:</b><br>
+                            In existing Vehicle Auction system all the procedures are done manually .Documents for
+                            bidding
+                            should be submitted physically
+                            Cost for maintaing staff and area for auction is huge..It takes more effort and physical
+                            space
+                            to keep track of paper documents, to find information and to keep details secure Physical
+                            appearance of the clients are Mandatory. Less Transparency is involved. More time is
+                            required.It is Expensive to maintain Manual auction.Location of the Auction may be far away
+                            from
+                            the clients location then he cannot participate in auction.Client should attend the Auction
+                            at
+                            specified time which is not adjustable for client.Inconsistency in data entry, room for
+                            errors,
+                            miskeying information.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row col-11  m-auto p-1 m-0">
+                    <div class="col-6 ps-2 m-0 d-flex align-items-center">
+                        <p style="text-align: justify;font-size: 15px"><b>Proposed System:</b>
+                            <br>
+                            Manual Auction system is changed into Digital Auction system. Where Digitalization and
+                            Automation is
+                            the key concepts
+                            Advantages of Proposed System:
+                            In this system less staff is needed which decreases the cost of maintainance .Physical
+                            appearance is
+                            not required ,
+                            where client can manage all the things by visiting the portal .This system increases the
+                            transparency and because of automation, speed of the procedure/auction will increase. Client
+                            can
+                            join the auction from any place across the globe .Time for maintaing action is decreased.
+                            Data
+                            will
+                            be stored and maintained safely. Here the client can get good customer support and can
+                            resolve
+                            the
+                            issues in less time .which improves the Trust on the Auction. Here the clients can easily
+                            access
+                            the
+                            information of vehicles without visiting the vehicle.
+                        <p>
+                    </div>
+                    <div class="col-6 p-0 m-0">
+                        <div class="container">
+                            <img src="{% static 'images/proposedsystem.jpg' %}" width="100%" height="80%">
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div style="background-color:#373942;;height: auto;">
+
+
+        <div class="row col-lg-8 m-auto p-2">
+            <div class="col-6 pt-2 pb-0">
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                    <span class="p-1 m-0" style="font-size: 14px; font-weight: 500;">Website Developed By:</span>
+                </div>
+                <div class="text-left ps-5 m-0 p-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class="" style="padding: 23px; font-size: 13px; color: white; font-weight: 400;">
+                        GUNDA ABINAV<br>
+                        OFFICE ADDRESS: Ramathapur, Hyderabad.<br>
+                        Phone: 8186080689.
+                    </p>
+                </div>
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center p-0 m-0">
+                    <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">JOIN US</span>
+                </div>
+                <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class=""
+                        style="padding: 28px; font-size: 13px; color: white; font-weight: 400;border-radius: 4px;">
+                        YAHOO: auctionportal@yahoo.com<br>
+                        GMAIL: auctionportal@gmail.com
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-6 pt-2">
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                    <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">ABOUT US</span>
+                </div>
+                <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class=""
+                        style="padding: 36px; font-size: 13px; color: white; font-weight: 400;text-indent: 30px;text-align: justify;">
+                        "
+                        An Auction Portal also knows as an online auction website or platform, is a virtual marketplace
+                        that facilitates the buying and selling of vehicles through an auction format. Unlike
+                        traditional auctions take place in physical locations, auction portals enable users to
+                        participate in auctions from the comfort of their homes or offices using their computers or
+                        mobile devices.
+                        Auctions are performed on several vehicles presented in the site.
+                        Primarily, the Starting bid is displayed on each and every vehicle. Later on,users can make more
+                        bids on the followed Vehicles
+                        "
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="d-flex  justify-content-between" style="background-color: #00498D;height: 30px;">
+        <div class="pl-">
+            <p style="color: white;">Copyright@2023</p>
+        </div>
+        <div style="padding-right: 10px;">
+            <p style="color: white;">Auctions</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

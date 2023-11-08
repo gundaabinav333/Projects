@@ -1,0 +1,209 @@
+{% load static %}
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boostrap.min.css' %}">
+
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        background-color: #00498D !important;
+    }
+
+    .dropdown-menu a {
+        color: black !important;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-weight: 400;
+    }
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Auction Portal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'INDEX' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'About' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Module</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'user' %}">USER</a>
+                         <a class="dropdown-item" href="{% url 'Admin' %}">ADMIN</a>
+                        <a class="dropdown-item" href="{% url 'Manager' %}">MANAGER</a>
+                    </div>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link"  href="{% url 'login' %}">Login</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Registration' %}">Registration</a>
+                </li>
+            </ul>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+             Logout
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Logout</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure want to logout?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">no</button>
+                            <button type="button" class="btn btn-primary">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+  
+  
+            </form>
+        </div>
+    </nav>
+
+  <div class="jumbotron" style="text-align: center;">
+  <h1 class="display-3">Contact</h1>
+  </div>
+ 
+<div class="row">
+    <div class="col-1">
+    </div>
+
+<div class="col-4">
+    <form action="">
+    <div class="form-group">
+        <div style="text-align: center;"><label><b><u>Contact Form:</u></b></label></div>
+      <label for="">Name:</label>
+      <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+    </div>
+    </form>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+      
+    </div>
+    <div class="form-group">
+      <label for="">Mobile no</label>
+      <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+      
+    </div>
+    <div style="text-align:center;"><input type="submit" class="btn btn-primary"></div>
+</div>
+<div class="col-1">
+
+</div>
+    
+<div class="col-6">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3897389432764!2d78.52735221467071!3d17.393074188075197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb990504a28b7d%3A0x2bfa2aa2c717879f!2sAurora&#39;s%20PG%20College!5e0!3m2!1sen!2sin!4v1673757802474!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+  <br>
+</div>
+<footer>
+
+</body>
+</footer>
+<div style="background-color:#373942;;height: auto;">
+
+
+    <div class="row col-lg-8 m-auto p-2">
+        <div class="col-6 pt-2 pb-0">
+            <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                <span class="p-1 m-0" style="font-size: 14px; font-weight: 500;">Website Developed By:</span>
+            </div>
+            <div class="text-left ps-5 m-0 p-0" style="background-color: #272e24;border-radius: 4px;">
+                <p class="" style="padding: 23px; font-size: 13px; color: white; font-weight: 400;">
+                    GUNDA ABINAV<br>
+                    OFFICE ADDRESS: Ramathapur, Hyderabad.<br>
+                    Phone: 8186080689.
+                </p>
+            </div>
+            <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center p-0 m-0">
+                <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">JOIN US</span>
+            </div>
+            <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                <p class=""
+                    style="padding: 28px; font-size: 13px; color: white; font-weight: 400;border-radius: 4px;">
+                    YAHOO: auctionportal@yahoo.com<br>
+                    GMAIL: auctionportal@gmail.com
+
+                </p>
+            </div>
+        </div>
+
+        <div class="col-6 pt-2">
+            <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">ABOUT US</span>
+            </div>
+            <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                <p class=""
+                    style="padding: 36px; font-size: 13px; color: white; font-weight: 400;text-indent: 30px;text-align: justify;">
+                    "
+                    An Auction Portal also knows as an online auction website or platform, is a virtual marketplace
+                    that facilitates the buying and selling of vehicles through an auction format. Unlike
+                    traditional auctions take place in physical locations, auction portals enable users to
+                    participate in auctions from the comfort of their homes or offices using their computers or
+                    mobile devices.
+                    Auctions are performed on several vehicles presented in the site.
+                    Primarily, the Starting bid is displayed on each and every vehicle. Later on,users can make more
+                    bids on the followed Vehicles
+                    "
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="d-flex  justify-content-between" style="background-color: #00498D;height: 30px;">
+    <div class="pl-">
+        <p style="color: white;">Copyright@2023</p>
+    </div>
+    <div style="padding-right: 10px;">
+        <p style="color: white;">Auctions</p>
+
+    </div>
+
+</div>
+
+
+
+
+<style>
+   
+</style>
+</body>
+</html>

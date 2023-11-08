@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-between ps-5  pt-lg-4 pb-lg-4 homePageHeader" ng-controller="homeController">
+    <div class="imsHeading d-none d-lg-block">IMS<span style="font-size: 23px;">(Inventory Management System)</span>
+    </div>
+    <div class="d-none d-lg-block pe-lg-4 pt-lg-4 text-white" style="font-size: 20px;font-weight:600">Welcome-Abinav
+        Gunda<button class="btn btn-primary ms-2" ng-click="logout()">Logout</button>
+    </div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg bg-light d-md-none">
+    <div class="container-fluid">
+        <a class="navbar-brand imsLogo" href="#">IMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" ui-sref="createClient">Create Client</a>
+                <a class="nav-link" ui-sref="addProduct">Add Product</a>
+                <a class="nav-link" ui-sref="manageOutwards">Manage(intake/Outwards)</a>
+                <a class="nav-link" ui-sref="stockDetails">Stock Details</a>
+                <a class="nav-link" ui-sref="transactionDetails">Transaction Details</a>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<hr class="p-0 m-0">
+<div class="row p-0 m-0">
+    <div class="col-2 navigationSection p-1 m-0 d-none d-lg-block">
+        <ul class="p-0">
+            <li>Dashboard</li>
+            <li ui-sref="inner">Create client</li>
+            <li ui-sref="addProduct">Add Product</li>
+            <li ui-sref="manageOutwards">Manage(Intake/Outwards)</li>
+            <li ui-sref="stockDetails">Stock Details</li>
+            <li ui-sref="transactionDetails">Transaction Details</li>
+        </ul>
+    </div>
+    <div class="col-12 col-lg-10">
+        <ui-view>
+            <span class="d-flex justify-content-center align-items-center mt-5 pt-5 ">
+                "Managing your inventory wisely is like writing a balance sheet for your success."
+            </span>
+        </ui-view>
+    </div>
+</div>

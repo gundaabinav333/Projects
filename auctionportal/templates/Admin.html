@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boostrap.min.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .navbar {
+        background-color: #00498D !important;
+    }
+
+    .dropdown-menu a {
+        color: black !important;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-weight: 400;
+    }
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Auction Portal <span class="sr-only">(current)</span></a>
+                </li>
+               
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="../project-Auction portal/Contact.html">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../project-Auction portal/About.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Module</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'User1' %}">USER</a>
+                        <a class="dropdown-item" href="#">ADMIN</a>
+                        <a class="dropdown-item" href="{% url 'Manager' %}">MANAGER</a>
+                    </div>
+                    </div>
+                </li>
+            
+            </ul>
+        </nav>
+ <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3" style="text-align:center">Admin</h1>
+    </div>
+</div>
+<div class="container">
+    <p>In this website all the vehicles which are available for the auction are displayed .If the client clicks on the image of the vehicle all the features of the vehicle, price of the vehicle, manufactured year of the vehicle, condition, minimum amount for making a bid and when will the bidding ends and status of the bidding results whether he won the bid or not.</p>
+
+</div><br>
+<div class="he" style="text-align:center"><h2>Usecase Diagram</h2></div>
+<div class="row" style="text-align:center">
+    <div class="col-6">
+        <br>
+<img src="{% static 'images/userusecase.jpg' %}" width="70%" height="300px">
+    </div>
+    <div class="col-6" style="padding: 30px;">
+        A use case diagram is a graphical depiction of a user's possible interactions with a system. A use case diagram shows various use cases and different types of users the system has and will often be accompanied by other types of diagrams as well. The use cases are represented by either circles or
+    </div>
+</div>
+<div class="h2" style="text-align:center"><h2>Activity Diagram</h2></div>
+<div class="row" style="text-align:center">
+    <div class="col-6">
+        <p>Activity diagrams are graphical representations of workflows of stepwise activities and actions[1] with support for choice, iteration and concurrency. In the Unified Modeling Language, activity diagrams are intended to model both computational and organizational processes (i.e., workflows), as well as the data flows intersecting with the related activities.[2][3] Although activity diagrams primarily show the overall flow of control, they can also include elements showing the flow of data between activities through one or more data stores.[citation needed]
+</p>
+    </div>
+    <div class="col-6">
+<img src="{% static 'images/adminactivity.jpg' %}" width="70%" height="380px">
+    </div>
+</div>
+</body><br>
+<footer><div class="alert alert-info" role="alert">
+    <div style="text-align: center;"><b><P>Website designed by:<br>
+        Gunda Abinav<br>
+        mobile:+91 8186080689<br>
+        office Adress:Aurora PG college,Ramanthapur.<br>
+        Telangana.</div>
+    </P>
+    </b>            
+    </div>
+</div>
+</footer>
+</html>

@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boostrap.min.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #e3e8eb;
+        }
+
+        .navbar {
+            background-color:#3f48a9 !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'INDEX' %}">Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+
+                <p class="form-inline my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+            </ul>
+    </nav>
+    <br>
+    <br>
+
+    <div class="fullcolor">
+        <div class="row col-11 m-auto pt-4" style="border-radius: 40px;">
+            <div class="col-6 "  style="background-color: rgb(168, 173, 246,0.5);height:600px;border-radius: 40px;">
+                <div class="d-flex align-items-center " style="padding: 0px;margin: 0px;">
+                    
+
+                    
+                <P class="container text-center" style="color: black;font-weight: 400;font-size: 50px;padding-top: 30%;">Auction Portal</P>
+
+                </div>
+                <p class="container text-center " style="color: black;">Welcomes you</p>
+
+             
+            </div>
+            
+            <div class="col-6" style="background-color: white;height: 600px;border-radius: 40px">
+                <br>
+                <br>
+                <p style="font-size: 30px;">Register Yourself Here! </p>
+                <p style="font-size: 20px;color:green">{{result}}</p>
+                <div class="col-8 pt-3">
+                    <!-- <form action="../Registration/" method="POST">
+                        {% csrf_token %}
+                        <label for="firstname" class="form-check-label">First Name:</label>
+                        <input type="text" class="form-control" name="firstName">
+                        <label for="lastname" class="form-check-label">last Name:</label>
+                        <input type="text" class="form-control" name="lastName">
+                        <label for="username" class="form-check-label">User Name:</label>
+                        <input type="text" class="form-control" name="username">
+                        <label for="password" class="form-check-label">Password:</label>
+                        <input type="password" class="form-control" name="password">
+                        <label for="confirmpassword" class="form-check-label">Confirm Password:</label>
+                        <input type="password" class="form-control" name="confirmPassword">
+                        
+                        <label for="">Email:</label>
+                        <input type="email" name="email" class="form-control">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form> -->
+
+                    <form action="{% url 'Registration' %}" method="POST">
+                        {% csrf_token %}
+                    <div class="form-group">
+                            <label for="Username">User Name</label>
+                            <input type="text" name="yourusername" id="" class="form-control" placeholder="User name" aria-describedby="helpId">
+                        </div>    
+                    <div class="form-group">
+                      <label for="Firstname">First Name</label>
+                      <input type="text" name="yourfirstname" id="" class="form-control" placeholder="First name" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <label for=" Lastname">Last Name</label>
+                        <input type="text" name="yourlastname" id="" class="form-control" placeholder="Last name" aria-describedby="helpId">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="text" name="yourpassword" id="" class="form-control" placeholder="Password" aria-describedby="helpId">
+                      </div>
+                      <div class="form-group">
+                        <label for="confirmpassword">CONFIRM PASSWORD</label>
+                        <input type="text" name="yourconfirmpassword" id="" class="form-control" placeholder="Confirm password" aria-describedby="helpId">
+                      </div>
+                    
+                <input type="submit" class="btn btn-primary">
+            
+                </div>
+            </form>
+            
+                </div>
+                
+                <div class="pt-3 pl-3">
+                    
+                    <span>Already have an account?</span> <a href="{% url 'login' %}">Login</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</body><br><br>
+
+
+</footer>
+
+</html>

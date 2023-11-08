@@ -1,0 +1,188 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boostrap.min.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .navbar {
+        background-color: #00498D !important;
+    }
+
+    .dropdown-menu a {
+        color: black !important;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-weight: 400;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Auction Portal <span class="sr-only">(current)</span></a>
+                </li>
+               
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'INDEX' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Contact' %}">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'About' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Module</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">USER</a>
+                        <a class="dropdown-item" href="{% url 'Admin' %}">ADMIN</a>
+                        <a class="dropdown-item" href="{% url 'Manager' %}">MANAGER</a>
+                    </div>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link"  href="{% url 'login' %}">Login</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Registration' %}">Registration</a>
+                </li>
+            </ul>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Logout</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              <div class="modal-body">
+                  Are you sure want to logout?
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                  <button type="button" class="btn btn-primary">yes   </button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+            </form>
+        </div>
+    </nav>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3" style="text-align:center">User</h1>
+    </div>
+</div>
+<div class="container">
+    <p>In this website all the vehicles which are available for the auction are displayed .If the client clicks on the image of the vehicle all the features of the vehicle, price of the vehicle, manufactured year of the vehicle, condition, minimum amount for making a bid and when will the bidding ends and status of the bidding results whether he won the bid or not.</p>
+
+</div><br>
+<div class="he" style="text-align:center"><h2>Usecase Diagram</h2></div>
+<div class="row" style="text-align:center">
+    <div class="col-6">
+        <br>
+<img src="{% static 'images/usercase.jpg' %}" width="70%" height="350px">
+    </div>
+    <div class="col-6 text-center" style="padding: 30px;">
+        A use case diagram is a graphical depiction of a user's possible interactions with a system. A use case diagram shows various use cases and different types of users the system has and will often be accompanied by other types of diagrams as well. The use cases are represented by either circles or
+    </div>
+</div>
+<div class="h2" style="text-align:center"><h2>Activity Diagram</h2></div>
+<div class="row" style="text-align:center">
+    <div class="col-6 text-center">
+        <br>
+        <br>
+        <p>Activity diagrams are graphical representations of workflows of stepwise activities and actions[1] with support for choice, iteration and concurrency. In the Unified Modeling Language, activity diagrams are intended to model both computational and organizational processes (i.e., workflows), as well as the data flows intersecting with the related activities.[2][3] Although activity diagrams primarily show the overall flow of control, they can also include elements showing the flow of data between activities through one or more data stores.[citation needed]
+</p>
+    </div>
+    <div class="col-6">
+<img src="{% static 'images/useractivitydiagram.jpg' %}" width="70%" height="350px">
+    </div>
+</div>
+</body>
+<footer>
+    <div style="background-color:#373942;;height: auto;">
+
+
+        <div class="row col-lg-8 m-auto p-2">
+            <div class="col-6 pt-2 pb-0">
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                    <span class="p-1 m-0" style="font-size: 14px; font-weight: 500;">Website Developed By:</span>
+                </div>
+                <div class="text-left ps-5 m-0 p-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class="" style="padding: 23px; font-size: 13px; color: white; font-weight: 400;">
+                        GUNDA ABINAV<br>
+                        OFFICE ADDRESS: Ramathapur, Hyderabad.<br>
+                        Phone: 8186080689.
+                    </p>
+                </div>
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center p-0 m-0">
+                    <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">JOIN US</span>
+                </div>
+                <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class=""
+                        style="padding: 28px; font-size: 13px; color: white; font-weight: 400;border-radius: 4px;">
+                        YAHOO: auctionportal@yahoo.com<br>
+                        GMAIL: auctionportal@gmail.com
+    
+                    </p>
+                </div>
+            </div>
+    
+            <div class="col-6 pt-2">
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                    <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">ABOUT US</span>
+                </div>
+                <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class=""
+                        style="padding: 36px; font-size: 13px; color: white; font-weight: 400;text-indent: 30px;text-align: justify;">
+                        "
+                        An Auction Portal also knows as an online auction website or platform, is a virtual marketplace
+                        that facilitates the buying and selling of vehicles through an auction format. Unlike
+                        traditional auctions take place in physical locations, auction portals enable users to
+                        participate in auctions from the comfort of their homes or offices using their computers or
+                        mobile devices.
+                        Auctions are performed on several vehicles presented in the site.
+                        Primarily, the Starting bid is displayed on each and every vehicle. Later on,users can make more
+                        bids on the followed Vehicles
+                        "
+    
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+    <div class="d-flex  justify-content-between" style="background-color: #00498D;height: 30px;">
+        <div class="pl-">
+            <p style="color: white;">Copyright@2023</p>
+        </div>
+        <div style="padding-right: 10px;">
+            <p style="color: white;">Auctions</p>
+    
+        </div>
+    
+    </div>
+</footer>
+</html>

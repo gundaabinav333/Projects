@@ -1,0 +1,43 @@
+.loginButton {
+  background-color: #fff;
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+  border-radius: 80px;
+  font-weight: 700;
+  font-size: 14px;
+  width: 70px;
+  height: 35px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.log {
+  background-color: #fff !important;
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+  border-radius: 80px;
+  font-weight: 700;
+  font-size: 14px;
+  width: 170px;
+  height: 35px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.signUpButton {
+  background-color: #1da1f2;
+  border: 1px solid #1da1f2;
+  color: white;
+  border-radius: 80px;
+  font-weight: 700;
+  font-size: 14px;
+  width: 90px;
+  height: 35px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.modalLabels {
+  color: black !important;
+  font-weight: 600;
+}

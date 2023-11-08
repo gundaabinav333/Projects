@@ -1,0 +1,261 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boostrap.min.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        background-color: #00498D !important;
+    }
+
+    .dropdown-menu a {
+        color: black !important;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-weight: 400;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Auction Portal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'INDEX' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Contact' %}">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'About' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Module</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'user' %}">User</a>
+                        <a class="dropdown-item" href="{% url 'Admin' %}">Admin</a>
+                        <a class="dropdown-item" href="{% url 'Manager' %}">Manager</a>
+                    </div>
+                </li>
+                <form class="form-inline my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Registration' %}">Registration</a>
+
+            </ul>
+
+
+
+
+
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">About?</h1>
+
+        </div>
+    </div>
+    <div class="container">
+        <p><i>An online auction is an auction held over the internet and accessed by internet connected devices. Similar
+                to in-person auctions, online auctions come in a variety of types, with different bidding and selling
+                rules.
+                Main Aim of the project is to build a website which solves general Auction problems. Here we make the
+                Auction into fully digital mode .Here we will deal with vehicle auctions.
+                In this website all the vehicles which are available for the auction are displayed .If the client clicks
+                on the image of the vehicle all the features of the vehicle, price of the vehicle, manufactured year of
+                the vehicle, condition, minimum amount for making a bid and when will the bidding ends and status of the
+                bidding results whether he won the bid or not.
+                If a client want to purchase a vehicle he can visit the website and should create account/profile with
+                basic information and then he can select the type of vehicle needed and make a bid .If the client wins
+                the certain vehicle auction then he can purchase the vehicle .For making a bid client should pay certain
+                amount with reference to the price of the vehicle.
+                Here the client saves a lot of time, where generally in normal Auction it takes lot of time and physical
+                appearcence is needed. Here we do not need the physical appearcence of the client for bidding, he should
+                only give basic personal information .All the payments regarding the Auction are made in online mode,
+                which improves the transparency and good customer support will be provided.
+            </i>I </p>
+    </div>
+
+
+    <div class="row">
+        <div class="col-6 text-center">
+            <img src="{% static 'images/softwareRequirements.png' %}" width="80%" height="290px">
+        </div>
+        <div class="col-6">
+            <div class="text-center pt-5">
+                <p>
+                    <b>&nbsp&nbspSoftware Requirements:</b><br>
+                    &nbsp&nbspSoftware Requirement:
+
+                    &nbsp&nbspdesigning : HTML,CSS<br>
+                    &nbsp&nbspProgramming language : PYTHON<br>
+                    &nbsp&nbspDatabase : postgresql<br>
+                    &nbsp&nbspFramework - Django<br>
+                    &nbsp&nbspIde - visual studio code
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-6">
+            <div class="text-center pt-5">
+                <p><b>Hardware Requirement:</b>
+                    Windows family : windows XP or above<br>
+                    Processor : I3 processer (min)<br>
+                    RAM : 4GB and above<br>
+                    Storage : 250GB and above<br>
+
+                <p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="text-center">
+                <img src="{% static 'images/hardwareRequirements.jpg' %}" width="80%" height="210px" style="border-radius: 14px;">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <b>Feasibility study:</b>&nbsp;<br>
+        1. Technical Feasibility
+        2. Operational Feasibility
+        3. Economic Feasibility<br>
+
+        <b>Technical Feasibility:&nbsp;</b>
+        • The technical issue usually raise during the feasibility stage of the
+        investigation includes the following.
+        • Does the necessary technology exist to do what is suggested?
+        • Can the system be upgraded if developed?
+        • Are there technical guarantees of accuracy, reliability, case of
+        access and data security.<br>
+
+        <b>Operational Feasibility:&nbsp;</b>
+
+        • Operation feasibility aspects of the project implementation.
+        • Is there sufficient support for the management from the users?
+        • Will they resist from the user that will be undetermined possible
+        application benefits?
+        • The well planned design would ensure the optimal utilization of
+        the computer resources and would help in the improvement of Performance status.<br>
+
+
+
+        <b>Economic Feasibility :</b>
+
+        • Economic analysis is the most frequently used evaluating the
+        Effectiveness of proposed system, more commonly known as
+        Benefit analysis. The Benefit analysis is to determine benefits and savings which are
+        expected from candidate system and compare them with cost.
+
+
+    </div>
+
+    <div style="background-color:#373942;;height: auto;">
+
+
+        
+    <div style="background-color:#373942;;height: auto;">
+
+
+        <div class="row col-lg-8 m-auto p-2">
+            <div class="col-6 pt-2 pb-0">
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                    <span class="p-1 m-0" style="font-size: 14px; font-weight: 500;">Website Developed By:</span>
+                </div>
+                <div class="text-left ps-5 m-0 p-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class="" style="padding: 23px; font-size: 13px; color: white; font-weight: 400;">
+                        GUNDA ABINAV<br>
+                        OFFICE ADDRESS: Ramathapur, Hyderabad.<br>
+                        Phone: 8186080689.
+                    </p>
+                </div>
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center p-0 m-0">
+                    <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">JOIN US</span>
+                </div>
+                <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class=""
+                        style="padding: 28px; font-size: 13px; color: white; font-weight: 400;border-radius: 4px;">
+                        YAHOO: auctionportal@yahoo.com<br>
+                        GMAIL: auctionportal@gmail.com
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-6 pt-2">
+                <div style="background-color: #25272C; color: white; border-radius: 4px;" class="text-center">
+                    <span class="p-0 m-0" style="font-size: 14px; font-weight: 500;">ABOUT US</span>
+                </div>
+                <div class="text-left ps-5 m-0" style="background-color: #272e24;border-radius: 4px;">
+                    <p class=""
+                        style="padding: 36px; font-size: 13px; color: white; font-weight: 400;text-indent: 30px;text-align: justify;">
+                        "
+                        An Auction Portal also knows as an online auction website or platform, is a virtual marketplace
+                        that facilitates the buying and selling of vehicles through an auction format. Unlike
+                        traditional auctions take place in physical locations, auction portals enable users to
+                        participate in auctions from the comfort of their homes or offices using their computers or
+                        mobile devices.
+                        Auctions are performed on several vehicles presented in the site.
+                        Primarily, the Starting bid is displayed on each and every vehicle. Later on,users can make more
+                        bids on the followed Vehicles
+                        "
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="d-flex  justify-content-between" style="background-color: #00498D;height: 30px;">
+        <div class="pl-">
+            <p style="color: white;">Copyright@2023</p>
+        </div>
+        <div style="padding-right: 10px;">
+            <p style="color: white;">Auctions</p>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+    
+</body>
+
+</html>

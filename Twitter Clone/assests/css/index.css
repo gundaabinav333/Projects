@@ -1,0 +1,137 @@
+.sideMenu {
+  font-weight: 500;
+  font-size: 18px;
+}
+.sideMenuIcons {
+  font-size: 25px !important;
+}
+.postButton {
+  border: none;
+  background-color: #59afe8;
+  color: white;
+  font-weight: 600;
+  width: 100px;
+  padding: 13px;
+  border: 1px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+.tweet .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.bi-images {
+  font-size: 25px !important;
+}
+.userSearchBar {
+  border: 1px solid rgb(76, 186, 255);
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+}
+.userSearchBar::placeholder {
+  text-align: center;
+}
+.getUser {
+  padding-left: 50px;
+  padding-top: 30px;
+  border-radius: 18px;
+}
+.getUserName {
+  font-weight: 500;
+}
+.followButton {
+  display: block;
+  border: none;
+  background-color: rgb(76, 186, 255);
+  border-radius: 15px;
+  padding: 5px;
+  width: 30%;
+  color: white;
+}
+.usersName {
+  color: inherit;
+  font-weight: 500;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.tweetDivison:hover {
+  background-color: white;
+}
+.tweetDivison:hover {
+  background-color: #f7f7f7;
+}
+.tweetImage {
+  border-radius: 10px;
+}
+.likeButton {
+  border: none !important;
+  background-color: white !important;
+}
+.bi-hand-thumbs-up-fill {
+  color: white !important;
+  text-shadow: 0 0 6px black !important;
+}
+.like-active {
+  color: rgb(47, 47, 160) !important;
+}
+.fa-thumbs-up {
+  color: black;
+}
+.likeDivison {
+  border: none;
+  background-color: white;
+}
+.sideMenuButtons {
+  border: none;
+  background-color: white;
+}
+#profileImage {
+  position: absolute;
+  bottom: 55%;
+  left: 29.5%;
+}
+.bi-camera {
+  filter: brightness(3) !important;
+  font-size: 22px !important;
+}
+.profileImageIcon {
+  position: absolute;
+  bottom: 58%;
+  left: 36.5%;
+  z-index: 1;
+}
+.userImage {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.postsProfileImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.subscribeButton {
+  border-radius: 14px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  height: 30px;
+  width: 80px;
+}
+.newsHeading {
+  font-weight: 300;
+}
+.newsContent {
+  font-weight: 500;
+}
+.newsTweets {
+  font-weight: 300;
+  font-size: 14px;
+}
+.profileHomeButtons {
+  border: none;
+}
