@@ -1,0 +1,19 @@
+<div class="row col-5 m-auto">
+    <div class=" pt-3 p-3 ms-5">
+        <p class="text-center addDepartmentHeading mt-3 text-nowrap text-center" style="border-bottom:2px solid #ef5aca;width:100% ">Update
+            Salary</p>
+        <label for="" class="form-label mt-4">Select Employee <span class="text-danger">*</span></label>
+        <select name="" id="" class="form-control" ng-model="employeeId" >
+            <option value="">select</option>
+            <option value="{{employee.id}}" ng-repeat="employee in employees">{{employee.name}}</option>
+        </select>
+        <input type="text" name="" id="" ng-model="salary" placeholder="Enter Salary (CTC)" class="form-control mt-2">
+        <div class="text-center mt-2"><button class="btn btn-primary mt-2 m-auto"
+                ng-click="updateSalary()">Update</button>
+        </div>
+    </div>
+    <div class="loaderContainer" ng-class="{'d-none':loader}">
+        <loader></loader>
+
+    </div>
+</div>

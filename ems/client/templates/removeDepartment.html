@@ -1,0 +1,15 @@
+<div class="col-12 col-lg-5 m-auto">
+    <p style="font-size: 26px; font-weight: 500; text-decoration: underline;" class="text-center mt-lg-5">Remove
+        Department</p>
+        <label for="" class="form-label mt-4">Select Department <span class="text-danger">*</span></label>
+        <select name="" id="" class="form-control" ng-model="department" >
+            <option value="">Select</option>
+            <option value="{{department.id}}" ng-repeat="department in departments" style="font-style: 10px !important;">{{department.department_name}}</option>
+        </select>
+        <div class="text-center mt-2"><button class="btn btn-primary mt-2 m-auto"
+                ng-click="removeDepartment()">Remove</button>
+        </div>
+        <div class="loaderContainer" ng-class="{'d-none':loader}">
+            <loader></loader>
+        </div>
+</div>

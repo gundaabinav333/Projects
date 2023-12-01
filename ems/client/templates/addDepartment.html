@@ -1,0 +1,13 @@
+<div class="col-12 col-lg-5 m-auto">
+    <p style="font-size: 26px; font-weight: 500; text-decoration: underline;" class="text-center mt-lg-5">Add
+        Department</p>
+        <label for="" class="form-label mt-3">Department Name: <span class="text-danger">*</span></label>
+        <p class="text-success p-0 m-0">{{departmentCreationStatus}}</p>
+        <input type="text" name="" id="" class="form-control w-100 m-auto" ng-model="departmentName" >
+        <div class="text-center mt-2"><button class="btn btn-primary m-auto"
+                ng-click="createDepartment()">Submit</button>
+        </div>
+        <div class="loaderContainer" ng-class="{'d-none':loader}">
+            <loader></loader>
+        </div>
+</div>

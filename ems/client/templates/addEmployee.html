@@ -1,0 +1,41 @@
+<div class="row col-12 col-lg-10 m-auto">
+    <div class="text-center addEmployeeHeading mt-3 text-center mb-5"
+        ><span style="border-bottom:2px solid #000000;width:5px">Add Employee</span></div>
+
+    <div class="col-6">
+        <p class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Employee Name:<span class="text-danger">*</span></p>
+        <input type="text" name="" id="" class="form-control" ng-model="employeeName" placeholder="Employee Name">
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Mobile No:<span class="text-danger">*</span></label>
+        <input type="text" name="" id="" class="form-control" ng-model="employeeMobile" placeholder="Mobile NO">
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Pan Card:<span class="text-danger">*</span></label>
+        <input type="text" name="" id="" class="form-control" ng-model="employeePanCard" placeholder="Pan Card">
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Joining Date:<span class="text-danger">*</span></label>
+        <input type="date" name="" id="" class="form-control" ng-model="employeeJoiningDate" >
+
+    </div>
+    <div class="col-6">
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Designation:<span class="text-danger">*</span></label>
+        <select name="" id="" class="form-control" ng-model="employeeDesignation">
+            <option value="">select</option>
+            <option value="{{designation.id}}" ng-repeat="designation in designations">{{designation.designation_name}}</option>
+        </select>
+        
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Department:<span class="text-danger">*</span></label>
+        <select name="" id="" class="form-control" ng-model="employeeDepartment" >
+            <option value="">select</option>
+            <option value="{{department.id}}" ng-repeat="department in departments" style="font-style: 10px !important;">{{department.department_name}}</option>
+        </select>
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Email:<span class="text-danger">*</span></label>
+        <input type="text" name="" id="" class="form-control" ng-model="employeeEmail" placeholder="ex:gundaabinav003@gmail.com">
+        <label for="" class="form-label" style="color: rgb(19, 19, 130);font-weight:500;">Salary:<span class="text-danger">*</span></label>
+        <input type="number" name="" id="" class="form-control" ng-model="employeeSalary" placeholder="ex:55,000 INR (CTC)">
+    </div>
+
+    <button class="btn btn-outline-primary w-50 mt-3 m-auto" ng-click="addEmployee()">Add</button>
+    <div class="loaderContainer" ng-class="{'d-none':loader}">
+        <loader></loader>
+
+    </div>
+
+</div>
+

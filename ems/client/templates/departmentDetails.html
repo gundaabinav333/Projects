@@ -1,0 +1,21 @@
+<div class="col-12 col-lg-7 m-auto">
+  <p style="font-size: 23px; font-weight: 500; text-decoration: underline;" class="text-center mt-lg-5">Department
+    Details</p>
+  <table class="table">
+    <thead>
+      <tr style="background-color: #FCDCF4;">
+        <th scope="col">Department ID</th>
+        <th scope="col">Department Name</th>
+        <th scope="col">Employees Count</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in departments | filter : filter">
+        <td scope="row" style="font-size: 14px !important;">{{item.id}}</td>
+        <td scope="row" style="font-size: 16px !important;">{{item.department_name}}</td>
+        <td scope="row" style="font-size: 16px !important;">{{item.employees_count}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,145 @@
+.navigationSection{
+    background-color: #00475F;   
+}
+nav{
+    width: 17vw;
+    height: 100vh;
+    padding-right: 15px;
+}
+body{
+    background-color: #F5F5F7;
+}
+.subOptions{
+    transition: all linear 0.3s;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 400;
+    height: 30px;
+    color: black;
+    border-radius: 4px;
+    list-style-type: none;
+    border-bottom: 1px solid blue;
+    margin: 3px;
+    padding: 5px;
+    font-weight: 400;
+  }
+  .ng-hide {
+    height: 0;
+  }
+  
+nav ul li{
+    list-style-type: none;
+    color: rgb(255, 255, 255,0.8);
+    font-size: 18px;
+    padding-top: 25px;
+    padding-right: 5px;
+}
+.subOptions li {
+    color: black;
+    font-size: 14px;
+    padding:5px;
+}
+.adminName{
+    font-size: 34px;
+    color:#00475F ;
+    font-weight: 500;
+}
+.overview{
+    height: 15vh;
+    width: 14vw;
+    margin-left: 25px;
+    border-radius: 8px;
+    box-shadow: 8px 7px 9px 0px rgba(0,0,0,0.1);
+}
+.divisionHeadings{
+    margin-left: 2px;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+}
+.accordian{
+    background-color: #00475F !important;
+}
+
+
+div.accordion-item {
+    border: none !important;
+    outline: none !important;
+
+}
+
+/* Remove borders from accordion buttons */
+button.accordion-button {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important; 
+    box-shadow: none !important;
+    color: white !important; /* Preserve the original text color */
+
+    /* Remove the blue outline on focus */
+    /* Optional: Remove border-radius if you want squared corners */
+}
+
+/* Remove borders from accordion collapses */
+div.accordion-collapse {
+    border: none !important;
+    outline: none !important; /* Remove the blue outline on focus */
+
+}
+
+.addDepartmentHeading{
+    font-size: 28px;
+    font-weight: 500;
+}
+.addEmployeeHeading{
+    font-size: 28px;
+    font-weight: 500;
+}
+    .loaderContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0,0.7);
+        z-index: 999;
+    }
+.departmentNames{
+    font-size: 18px;
+}
+.addEmployeeInputBox{
+    border-radius: 6px;
+    display: block;
+    border-color: rgb(177, 177, 177);
+    outline: none;
+    border-style: solid;
+    width: 250px;
+    border-width: 1px;
+    font-weight: 100;
+    margin-bottom:11px;
+}
+.powerOffButtton {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+}
+
+@media print{
+    body *{
+        visibility: hidden;
+    }
+    #paySlipDivision,#paySlipDivision *{
+        visibility: visible;
+    }
+    #paySlipDivision{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

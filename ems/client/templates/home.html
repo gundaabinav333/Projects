@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS</title>
+    <link rel="stylesheet" href="../assests/styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.0/angular-ui-router.min.js"
+        integrity="sha512-BWLZUPMCCZGKazkRadkF9YXKQcVv1uAsyfvVx7T6pojT72iTrD6wegUBpaF8H3dCpLOeMDeXu+W58qgqZ0iwvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="p-0 m-0" ng-controller="MainController">
+    <div class="row">
+        <div class="col-2 navigationSection">
+            <div class="p-2 pt-3 pb-5 mb-5 pb-5" style="height: 150px;">
+                <img class="logo-white" src="https://pixelvide.com/images/logo_huge.webp" alt="logo pixelvide"
+                    width="80%">
+
+
+                </a>
+            </div>
+            <nav>
+                <div class="accordion border-0 bg-transparent" id="accordionExample">
+                    <!-- Item 1 -->
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                                Manage Departments
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse p-0 m-0"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions" ui-sref="addDepartment">- Add Department</li>
+                                <li role="button" class="subOptions" ui-sref="removeDepartment">- Remove Department</li>
+                                <li role="button" class="subOptions" ui-sref="departmentDetails">- Department Details
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                Manage Designation
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions" ui-sref="addDesignation">- Add Designation</li>
+                                <li role="button" class="subOptions" ui-sref="removeDesignation">- Remove Designation
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Manage Employees
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions" ui-sref="addEmployee">- Add Employee</li>
+                                <li role="button" class="subOptions" ui-sref="removeEmployee">- Remove Employee</li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Manage Salaries
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions" ui-sref="salaryDetails">- All employees salaries
+                                </li>
+                                <li role="button" class="subOptions" ui-sref="updateSalary">- Update Individual salary
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                Manage Leaves
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions">- Add leave</li>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                aria-controls="collapseFive">
+                                Manage Projects
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions" ui-sref="addProject">-Add project</li>
+                                <li role="button" class="subOptions" ui-sref="removeProject">-Remove Project</li>
+                                <li role="button" class="subOptions" ui-sref="addEmployeeToProject">-Add Employee to
+                                    project</li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent p-0 m-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent border-0 p-2 m-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                                aria-controls="collapseFive">
+                                Manage Payslips
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body m-0 p-0">
+                                <li role="button" class="subOptions" ui-sref="generatePayslip">Generate Payslip</li>
+                                <li role="button" class="subOptions" ui-sref="printPayslip">Print Payslip</li>
+                            </div>
+                        </div>
+                    </div>
+
+            </nav>
+
+        </div>
+        <div class="col-12 col-lg-10">
+            <p class="mt-4 ms-4 adminName">Welcome,{{adminName}}!</p>
+            <div class="row gap-2 col-10 d-flex m-4">
+                <div class="col-12 col-lg-1 flex-grow-1 overview"
+                    style="background-color: #1dee902b;border: 1px solid #1dee90;height:15vh">
+                    <p class="p-0 m-0">No of employees:</p>
+                    <p style="font-size: 45px;" class="text-center p-0 m-0">{{employeesCount}}</p>
+                </div>
+                <div class="col-12 col-lg-1 flex-grow-1 overview"
+                    style="background-color: #ef5aca36;border: 1px solid #ef5aca;">
+                    <p class="p-0 m-0">No of departments:</p>
+                    <p style="font-size: 45px;" class="text-center p-0 m-0">{{departmentsCount}}</p>
+                </div>
+                <div class="col-12 col-lg-1 flex-grow-1 overview"
+                    style="background-color: #00c0f02b;border: 1px solid #00c0f0;">
+                    <p class="p-0 m-0">No of projects:</p>
+                    <p style="font-size: 45px;" class="text-center p-0 m-0">{{projectsCount}}</p>
+                </div>
+                <div class="col-12 col-lg-1 flex-grow-1 overview"
+                    style="background-color: #ffa50040;border: 1px solid #ffa500;">
+                    <p class="p-0 m-0">Add Note:</p>
+                </div>
+                <div class="col-12 col-lg-1 flex-grow-1 d-flex align-items-end">
+                    <button class="border-0 bg-white" ng-click="refresh()"><i class="bi bi-arrow-clockwise"
+                            style="font-size: 25px !important;color: blue !important;"></i></button>
+                </div>
+            </div>
+            <div class="powerOffButtton" ng-click="logout()">
+                <i class="fa-solid fa-power-off ms-2" style="font-size: 35px;"></i>
+                <p class="pe-3">Logout</p>
+            </div>
+
+            <hr style="color: blue;">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <ui-view></ui-view>
+
+                </div>
+                <div class="col-2">
+                    <div class="input-group mb-3" style="width: 300px;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text border-0" id="basic-addon1"><i
+                                    class="bi bi-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                            aria-describedby="basic-addon1" ng-model="filter">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../assests/app.js"></script>
+<script src="../assests/controllers/mainController.js"></script>
+<script src="../assests/routes.js"></script>
+<script src="../assests/controllers/addDepartmentController.js"></script>
+<script src="../assests/controllers/removeDepartmentController.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../assests/controllers/departmentDetailsController.js"></script>
+<script src="../assests/controllers/addDesignationController.js"></script>
+<script src="../assests/controllers/removeDesignationController.js"></script>
+<script src="../assests/controllers/addEmployeeController.js"></script>
+<script src="../assests/controllers/removeEmployeeController.js"></script>
+<script src="../assests/controllers/updateSalaryController.js"></script>
+<script src="../assests/controllers/addProjectController.js"></script>
+<script src="../assests/controllers/removeProjectController.js"></script>
+<script src="../assests/controllers/salaryDetailsController.js"></script>
+<script src="../assests/controllers/payslipController.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+</html>

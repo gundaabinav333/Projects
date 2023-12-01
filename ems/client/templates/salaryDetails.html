@@ -1,0 +1,20 @@
+<div class="col-12 col-lg-7 m-auto">
+    <p style="font-size: 23px; font-weight: 500; text-decoration: underline;" class="text-center mt-lg-5">Employee Salary Details</p>
+    <table class="table">
+        <thead>
+            <tr style="background-color:#D4F4FC;">
+                <th scope="col">Employee ID</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in salaries | filter : filter">
+                <td data-label="Employee ID" style="font-size: 14px !important;">{{ item.employee.id }}</td>
+                <td data-label="Employee Name" style="font-size: 16px !important;">{{ item.employee.name }}</td>
+                <td data-label="Salary" style="font-size: 16px !important;">{{ item.salary }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
